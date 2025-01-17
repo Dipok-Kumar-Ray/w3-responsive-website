@@ -22,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.brand{
+.brand, .section-title{
     font-size: 3rem;
     font-weight: 700;
 }
@@ -64,8 +64,6 @@
 }
 .teams{
     display: flex;
-    /* margin:0px 150px; */
-    /* margin-top: 60px; */
     margin-left: 130px;
     max-width: 530px;
 }
@@ -77,8 +75,6 @@
 .our-features{
     margin-left: 130px;
     max-width: 100%;
-    /* max-width: 530px; */
-    /* margin-right: 60px; */
 }
 .feature-title{
     font-size: 2.8rem;
@@ -101,13 +97,20 @@
 
 /* responsive media queries for small device */
 @media screen and (max-width:576px){
-    .nab-banner,
+    .navbar,
     .nav-links,
+    /* .facts-container */
     .teams{
         flex-direction: column;
     }
     .team-img-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .facts-container, .sponsor-companies{
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 24px;
     }
 }
 /* responsive media queries for medium device  */
@@ -119,3 +122,63 @@
         margin-left: 50px 20px;
     }
 }
+ 
+
+
+/* facts style  start  */
+.facts-container{
+    margin: 0 130px;
+    gap: 20px;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-card{
+    border: 1px solid rgb(255, 144, 14);
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.section-description{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(114, 114, 114);
+}
+
+.fact-number{
+    font-size: 1.8rem;
+    font-weight: 600;
+
+} 
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* margin-top: 10px; */
+
+}
+.some-f{
+    margin:0px 150px;
+    
+}
+/* facts style ends  */
+
+/* sponsors style start  */
+
+.our-responsors{
+    margin: 0 130px;
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+}
+.sponsor-companies{
+    display: flex;
+    gap: 50px;
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+    
+}
+/* sponsors style end  */
